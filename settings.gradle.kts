@@ -35,5 +35,6 @@ dependencyResolutionManagement {
 }
 
 include(":examples:android")
+include(":examples:compose")
 include(":examples:jvm_cli")
 include(":bhandar")

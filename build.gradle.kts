@@ -26,6 +26,7 @@ val libVersion by rootProject.extra { "0.2.0" }
 apiValidation {
     ignoredProjects += setOf(
         "android",
+        "compose",
         "jvm_cli",
     )
 }
