@@ -15,6 +15,8 @@
 ![badge-linux](http://img.shields.io/badge/platform-linux-2D3F6C.svg?style=flat)
 ![badge-windows](http://img.shields.io/badge/platform-windows-4D76CD.svg?style=flat)
 
+<img src="./assets/bhandar.svg" width="48">
+
 Bhandar (ভান্ডার) is a simple repository implementation that can fetch data from a fetching source and (if configured) a store for cached access.
 
 The repository using only one model for simplicity, so the implementation on the sources would need to convert to the shared model definition.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bhandar Example</string>
+    <string name="show_from_cache_only">Show from cache only</string>
+    <string name="show_from_cache_fetch_is_missing">Show from cache (fetch is missing)</string>
+    <string name="show_from_cache_and_refresh_from_network">Show from cache and refresh from network</string>
+    <string name="show_from_network_show_cache_on_failure">Show from network (show cache on failure)</string>
+</resources>
