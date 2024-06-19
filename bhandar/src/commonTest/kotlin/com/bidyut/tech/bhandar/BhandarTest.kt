@@ -59,9 +59,11 @@ class BhandarTest {
         }
 
         val repository = Bhandar<Int, String>(
-            fetcher = DataFetcher.of { request ->
-                delay(50.milliseconds)
-                Result.success(request.toString())
+            fetcher = DataFetcher.ofFlow { request ->
+                flow {
+                    delay(50.milliseconds)
+                    emit(Result.success(request.toString()))
+                }
             },
             storage = Storage.of(
                 reader = StorageReader.of { request ->

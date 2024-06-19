@@ -34,20 +34,19 @@ open class Bhandar<Request, Model>(
 
     private fun fetcherOnly(
         request: Request,
-    ) = flow<ReadResult<Model>> {
+    ) = flow {
         emit(ReadResult.Loading())
-        fetcher.fetch(request).fold(
-            onSuccess = {
-                if (fetcher.isValid(it)) {
-                    emit(ReadResult.Success(it))
+        emitAll(fetcher.fetch(request).map { result ->
+            result.map { data ->
+                if (fetcher.isValid(data)) {
+                    ReadResult.Success(data)
                 } else {
-                    emit(ReadResult.Error("Data from fetcher is not valid"))
+                    ReadResult.Error("Data from fetcher is not valid")
                 }
-            },
-            onFailure = {
-                emit(ReadResult.Error(it.message ?: "Unknown error"))
+            }.getOrElse {
+                ReadResult.Error(it.message ?: "Unknown error")
             }
-        )
+        })
     }.distinctUntilChanged()
 
     private fun cacheOnly(
