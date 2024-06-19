@@ -21,7 +21,13 @@ plugins {
 }
 
 val libNamespace by rootProject.extra { "com.bidyut.tech.bhandar" }
-val libVersion by rootProject.extra { "0.1.0" }
+val libVersion by rootProject.extra { "0.2.0" }
+
+apiValidation {
+    ignoredProjects += setOf(
+        "jvm_cli",
+    )
+}
 
 allprojects {
     layout.buildDirectory = File("${rootDir}/build/${projectDir.relativeTo(rootDir)}")

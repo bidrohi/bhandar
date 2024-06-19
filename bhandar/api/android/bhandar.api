@@ -1,0 +1,119 @@
+public class com/bidyut/tech/bhandar/Bhandar {
+	public fun <init> (Lcom/bidyut/tech/bhandar/DataFetcher;Lcom/bidyut/tech/bhandar/Storage;)V
+	public synthetic fun <init> (Lcom/bidyut/tech/bhandar/DataFetcher;Lcom/bidyut/tech/bhandar/Storage;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun cached (Ljava/lang/Object;ZZ)Lkotlinx/coroutines/flow/Flow;
+	public static synthetic fun cached$default (Lcom/bidyut/tech/bhandar/Bhandar;Ljava/lang/Object;ZZILjava/lang/Object;)Lkotlinx/coroutines/flow/Flow;
+	public final fun fresh (Ljava/lang/Object;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public abstract interface class com/bidyut/tech/bhandar/DataFetcher {
+	public static final field Companion Lcom/bidyut/tech/bhandar/DataFetcher$Companion;
+	public abstract fun fetch (Ljava/lang/Object;)Lkotlinx/coroutines/flow/Flow;
+	public abstract fun isValid (Ljava/lang/Object;)Z
+}
+
+public final class com/bidyut/tech/bhandar/DataFetcher$Companion {
+	public final fun of (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;)Lcom/bidyut/tech/bhandar/DataFetcher;
+	public static synthetic fun of$default (Lcom/bidyut/tech/bhandar/DataFetcher$Companion;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/bidyut/tech/bhandar/DataFetcher;
+	public final fun ofFlow (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lcom/bidyut/tech/bhandar/DataFetcher;
+	public static synthetic fun ofFlow$default (Lcom/bidyut/tech/bhandar/DataFetcher$Companion;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/bidyut/tech/bhandar/DataFetcher;
+}
+
+public final class com/bidyut/tech/bhandar/DataFetcher$DefaultImpls {
+	public static fun isValid (Lcom/bidyut/tech/bhandar/DataFetcher;Ljava/lang/Object;)Z
+}
+
+public abstract interface class com/bidyut/tech/bhandar/ReadResult {
+}
+
+public final class com/bidyut/tech/bhandar/ReadResult$Cache : com/bidyut/tech/bhandar/ReadResult$Data {
+	public fun <init> (Ljava/lang/Object;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun copy (Ljava/lang/Object;)Lcom/bidyut/tech/bhandar/ReadResult$Cache;
+	public static synthetic fun copy$default (Lcom/bidyut/tech/bhandar/ReadResult$Cache;Ljava/lang/Object;ILjava/lang/Object;)Lcom/bidyut/tech/bhandar/ReadResult$Cache;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getData ()Ljava/lang/Object;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/bidyut/tech/bhandar/ReadResult$Data : com/bidyut/tech/bhandar/ReadResult {
+	public abstract fun getData ()Ljava/lang/Object;
+}
+
+public final class com/bidyut/tech/bhandar/ReadResult$Error : com/bidyut/tech/bhandar/ReadResult {
+	public fun <init> (Ljava/lang/String;Ljava/lang/Object;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/Object;
+	public final fun copy (Ljava/lang/String;Ljava/lang/Object;)Lcom/bidyut/tech/bhandar/ReadResult$Error;
+	public static synthetic fun copy$default (Lcom/bidyut/tech/bhandar/ReadResult$Error;Ljava/lang/String;Ljava/lang/Object;ILjava/lang/Object;)Lcom/bidyut/tech/bhandar/ReadResult$Error;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getErrorMessage ()Ljava/lang/String;
+	public final fun getPrev ()Ljava/lang/Object;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/bidyut/tech/bhandar/ReadResult$Loading : com/bidyut/tech/bhandar/ReadResult {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Object;)V
+	public synthetic fun <init> (Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun copy (Ljava/lang/Object;)Lcom/bidyut/tech/bhandar/ReadResult$Loading;
+	public static synthetic fun copy$default (Lcom/bidyut/tech/bhandar/ReadResult$Loading;Ljava/lang/Object;ILjava/lang/Object;)Lcom/bidyut/tech/bhandar/ReadResult$Loading;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ljava/lang/Object;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/bidyut/tech/bhandar/ReadResult$Success : com/bidyut/tech/bhandar/ReadResult$Data {
+	public fun <init> (Ljava/lang/Object;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun copy (Ljava/lang/Object;)Lcom/bidyut/tech/bhandar/ReadResult$Success;
+	public static synthetic fun copy$default (Lcom/bidyut/tech/bhandar/ReadResult$Success;Ljava/lang/Object;ILjava/lang/Object;)Lcom/bidyut/tech/bhandar/ReadResult$Success;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getData ()Ljava/lang/Object;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/bidyut/tech/bhandar/Storage : com/bidyut/tech/bhandar/StorageReader, com/bidyut/tech/bhandar/StorageWriter {
+	public static final field Companion Lcom/bidyut/tech/bhandar/Storage$Companion;
+}
+
+public final class com/bidyut/tech/bhandar/Storage$Companion {
+	public final fun of (Lcom/bidyut/tech/bhandar/StorageReader;Lcom/bidyut/tech/bhandar/StorageWriter;)Lcom/bidyut/tech/bhandar/Storage;
+	public final fun of (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;)Lcom/bidyut/tech/bhandar/Storage;
+	public static synthetic fun of$default (Lcom/bidyut/tech/bhandar/Storage$Companion;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lcom/bidyut/tech/bhandar/Storage;
+}
+
+public final class com/bidyut/tech/bhandar/Storage$DefaultImpls {
+	public static fun isValid (Lcom/bidyut/tech/bhandar/Storage;Ljava/lang/Object;)Z
+}
+
+public abstract interface class com/bidyut/tech/bhandar/StorageReader {
+	public static final field Companion Lcom/bidyut/tech/bhandar/StorageReader$Companion;
+	public abstract fun isValid (Ljava/lang/Object;)Z
+	public abstract fun read (Ljava/lang/Object;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class com/bidyut/tech/bhandar/StorageReader$Companion {
+	public final fun of (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lcom/bidyut/tech/bhandar/StorageReader;
+	public static synthetic fun of$default (Lcom/bidyut/tech/bhandar/StorageReader$Companion;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/bidyut/tech/bhandar/StorageReader;
+}
+
+public final class com/bidyut/tech/bhandar/StorageReader$DefaultImpls {
+	public static fun isValid (Lcom/bidyut/tech/bhandar/StorageReader;Ljava/lang/Object;)Z
+}
+
+public abstract interface class com/bidyut/tech/bhandar/StorageWriter {
+	public static final field Companion Lcom/bidyut/tech/bhandar/StorageWriter$Companion;
+	public abstract fun write (Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/bidyut/tech/bhandar/StorageWriter$Companion {
+	public final fun of (Lkotlin/jvm/functions/Function3;)Lcom/bidyut/tech/bhandar/StorageWriter;
+}
+
