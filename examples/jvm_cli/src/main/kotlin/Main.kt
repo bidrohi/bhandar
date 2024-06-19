@@ -22,9 +22,10 @@ fun main() {
     var shouldKeepGoing = true
     do {
         println()
-        println("1. Get value from cache, but fallback to network")
-        println("2. Get value from cache, and refresh from network")
-        println("3. Get value from network, but fallback to cache")
+        println("1. Get value from cache, with no fallback to network")
+        println("2. Get value from cache, but fallback to network")
+        println("3. Get value from cache, and refresh from network")
+        println("4. Get value from network, but fallback to cache")
         println("0. Exit")
         print("Enter your choice: ")
         val choice = readlnOrNull() ?: ""
@@ -37,7 +38,7 @@ fun main() {
 
             "1" -> {
                 lastJob = scope.launch {
-                    bhandar.cached(1, refresh = false).collect {
+                    bhandar.cached(1, refresh = false, fetchIfMissing = false).collect {
                         println(it)
                     }
                 }
@@ -45,7 +46,7 @@ fun main() {
 
             "2" -> {
                 lastJob = scope.launch {
-                    bhandar.cached(2, refresh = true).collect {
+                    bhandar.cached(2, refresh = false).collect {
                         println(it)
                     }
                 }
@@ -53,7 +54,15 @@ fun main() {
 
             "3" -> {
                 lastJob = scope.launch {
-                    bhandar.fresh(3).collect {
+                    bhandar.cached(3, refresh = true).collect {
+                        println(it)
+                    }
+                }
+            }
+
+            "4" -> {
+                lastJob = scope.launch {
+                    bhandar.fresh(4).collect {
                         println(it)
                     }
                 }
