@@ -11,6 +11,14 @@ plugins {
 kotlin {
     jvm("desktop")
 
+    macosArm64 {
+        binaries {
+            executable {
+                entryPoint = "main"
+            }
+        }
+    }
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "BhandarExample"
@@ -47,6 +55,9 @@ kotlin {
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.ktor.client.cio)
+        }
+        macosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
         wasmJsMain.dependencies {
             implementation(libs.ktor.client.js)
