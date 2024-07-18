@@ -2,6 +2,8 @@ package com.bidyut.tech.bhandar
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlin.experimental.ExperimentalObjCRefinement
+import kotlin.native.HiddenFromObjC
 
 interface DataFetcher<Request, Model> {
     fun fetch(
@@ -12,6 +14,8 @@ interface DataFetcher<Request, Model> {
         data: Model?,
     ): Boolean = data != null
 
+    @OptIn(ExperimentalObjCRefinement::class)
+    @HiddenFromObjC
     companion object {
         fun <Request, Model> ofFlow(
             isValid: (Model?) -> Boolean = { it != null },

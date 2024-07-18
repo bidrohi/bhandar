@@ -1,6 +1,8 @@
 package com.bidyut.tech.bhandar
 
 import kotlinx.coroutines.flow.Flow
+import kotlin.experimental.ExperimentalObjCRefinement
+import kotlin.native.HiddenFromObjC
 
 interface StorageReader<Request, Model> {
     fun read(
@@ -11,6 +13,8 @@ interface StorageReader<Request, Model> {
         data: Model?,
     ): Boolean = data != null
 
+    @OptIn(ExperimentalObjCRefinement::class)
+    @HiddenFromObjC
     companion object {
         fun <Request, Model> of(
             isValid: (Model?) -> Boolean = { it != null },
