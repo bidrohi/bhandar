@@ -13,7 +13,7 @@ kotlin = "2.0.0"
 kotlinx-binCompatibility = "0.15.0-Beta.2"
 kotlinx-coroutines = "1.8.1"
 kotlinx-kover = "0.8.0"
-ktor = "3.0.0-wasm2"
+ktor = "3.0.0-rc-1"
 test-turbine = "1.1.0"
 vanniktech-publish = "0.28.0"
 
