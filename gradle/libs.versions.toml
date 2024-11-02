@@ -1,21 +1,21 @@
 [versions]
-agp = "8.6.0"
+android-gradle = "8.7.2"
 android-compileSdk = "35"
 android-minSdk = "21"
 android-targetSdk = "35"
 android-buildTools = "35.0.0"
-androidx-activity = "1.9.2"
+androidx-activity = "1.9.3"
 androidx-appcompat = "1.7.0"
-androidx-lifecycle = "2.8.5"
-jetbrains-compose = "1.6.11"
-jetbrains-lifecycle = "2.8.0"
-kotlin = "2.0.20"
-kotlinx-binCompatibility = "0.15.0-Beta.2"
-kotlinx-coroutines = "1.8.1"
-kotlinx-kover = "0.8.0"
-ktor = "3.0.0-rc-1"
-test-turbine = "1.1.0"
-vanniktech-publish = "0.28.0"
+androidx-lifecycle = "2.8.7"
+jetbrains-compose = "1.7.0"
+jetbrains-lifecycle = "2.8.3"
+kotlin = "2.0.21"
+kotlinx-binCompatibility = "0.16.3"
+kotlinx-coroutines = "1.9.0"
+kotlinx-kover = "0.8.3"
+ktor = "3.0.0"
+test-turbine = "1.2.0"
+vanniktech-publish = "0.30.0"
 
 [libraries]
 androidx-activity = { module = "androidx.activity:activity", version.ref = "androidx-activity" }
@@ -34,8 +34,8 @@ test-kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-t
 test-turbine = { module = "app.cash.turbine:turbine", version.ref = "test-turbine" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-android-library = { id = "com.android.library", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "android-gradle" }
+android-library = { id = "com.android.library", version.ref = "android-gradle" }
 jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "jetbrains-compose" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

@@ -24,12 +24,6 @@ dependencyResolutionManagement {
                 includeGroupAndSubgroups("com.google")
             }
         }
-        maven {
-            url = uri("https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental")
-            mavenContent {
-                includeGroupAndSubgroups("io.ktor")
-            }
-        }
         mavenCentral()
     }
 }
