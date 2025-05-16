@@ -35,8 +35,8 @@ allprojects {
     layout.buildDirectory = File("${rootDir}/build/${projectDir.relativeTo(rootDir)}")
 }
 
-val jvmVersion = JavaVersion.VERSION_1_8
-val kotlinJvmTarget = JvmTarget.JVM_1_8
+val jvmVersion = JavaVersion.VERSION_11
+val kotlinJvmTarget = JvmTarget.JVM_11
 
 configure(subprojects) {
     tasks.withType<KotlinJvmCompile>().configureEach {
