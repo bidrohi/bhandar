@@ -21,7 +21,7 @@ kotlin {
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        moduleName = "BhandarExample"
+        outputModuleName = "BhandarExample"
         browser {
             commonWebpackConfig {
                 outputFileName = "bhandarExample.js"
