@@ -9,7 +9,7 @@ public class com/bidyut/tech/bhandar/Bhandar {
 public abstract interface class com/bidyut/tech/bhandar/DataFetcher {
 	public static final field Companion Lcom/bidyut/tech/bhandar/DataFetcher$Companion;
 	public abstract fun fetch (Ljava/lang/Object;)Lkotlinx/coroutines/flow/Flow;
-	public abstract fun isValid (Ljava/lang/Object;)Z
+	public fun isValid (Ljava/lang/Object;)Z
 }
 
 public final class com/bidyut/tech/bhandar/DataFetcher$Companion {
@@ -95,7 +95,7 @@ public final class com/bidyut/tech/bhandar/Storage$DefaultImpls {
 
 public abstract interface class com/bidyut/tech/bhandar/StorageReader {
 	public static final field Companion Lcom/bidyut/tech/bhandar/StorageReader$Companion;
-	public abstract fun isValid (Ljava/lang/Object;)Z
+	public fun isValid (Ljava/lang/Object;)Z
 	public abstract fun read (Ljava/lang/Object;)Lkotlinx/coroutines/flow/Flow;
 }
 
