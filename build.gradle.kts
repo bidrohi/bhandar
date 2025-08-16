@@ -21,7 +21,7 @@ plugins {
 }
 
 val libNamespace by rootProject.extra { "com.bidyut.tech.bhandar" }
-val libVersion by rootProject.extra { "0.3.0" }
+val libVersion by rootProject.extra { "0.4.0" }
 
 apiValidation {
     ignoredProjects += setOf(
