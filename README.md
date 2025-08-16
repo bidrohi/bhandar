@@ -1,7 +1,7 @@
 # Bhandar : Simple network/local source repository
 
 [![Kotlin Alpha](https://kotl.in/badges/alpha.svg)](https://kotlinlang.org/docs/components-stability.html)
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.0.0-purple.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.10-purple.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
 [![License](https://img.shields.io/badge/License-CC_BY_SA_4.0-blue.svg)](https://github.com/bidrohi/seahorse/blob/master/LICENSE.md)
 
 ![badge-jvm](http://img.shields.io/badge/platform-jvm-DB413D.svg?style=flat)
